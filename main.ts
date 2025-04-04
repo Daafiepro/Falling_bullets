@@ -58,6 +58,12 @@ loops.everyInterval(1000, function () {
     }
     Bullet2.delete()
 })
+loops.everyInterval(500, function () {
+    music.play(music.stringPlayable("C C C5 C5 B G E E ", 120), music.PlaybackMode.UntilDone)
+    music.play(music.stringPlayable("A A G E D D - - ", 120), music.PlaybackMode.UntilDone)
+    music.play(music.stringPlayable("A A F F C5 B A A ", 120), music.PlaybackMode.UntilDone)
+    music.rest(music.beat(BeatFraction.Double))
+})
 basic.forever(function () {
     if (score == 5) {
         game.addScore(1)
